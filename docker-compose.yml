@@ -10,7 +10,7 @@ services:
     ports:
       - "80:5000"
     command: "npm start"
-    container_name: hacker_news
+    container_name: hnews
     networks:
       net:
         aliases:
