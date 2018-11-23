@@ -17,7 +17,7 @@ Executing the `run.sh` script docker will:
 
 ### Network
 
-To the running container is assigned the static ip `172.42.0.2`, exposed on port `5000` and binded on port `80` of your host's network. To see the running service open in browser at: `172.42.0.2:5000`
+To see the running service fire up your browser at `172.42.0.2:5000` et voilà your **Hacker News** client is served.
 
 ![hnews](img/hnews.png)
 
