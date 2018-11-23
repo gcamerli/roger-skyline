@@ -23,6 +23,10 @@ To see the running service fire up your browser at `172.42.0.2:5000` et voilà y
 
 + Source: [react-hn](https://github.com/insin/react-hn)
 
+### Reference
+
++ [Safer bash scripts with 'set -euxo pipefail'](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)
+
 ---
 
 Happy hacking!
