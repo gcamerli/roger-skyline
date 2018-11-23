@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# ./healthcheck
+
+ping -c 3 127.0.0.1 &> /dev/null
+
+if [ $? == 0 ]; then
+  echo '[Status] OK'
+else
+  echo '[Status] KO'
+  exit 1
+fi

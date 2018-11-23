@@ -1,0 +1,28 @@
+version: '3.6'
+
+services:
+  web:
+    image: roger:latest
+    user: roger
+    hostname: skyline
+    pid: host
+    restart: always
+    ports:
+      - "80:5000"
+    command: "npm start"
+    container_name: hacker_news
+    networks:
+      net:
+        aliases:
+          - web
+        ipv4_address: 172.42.0.2
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/healthcheck"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+
+networks:
+  net:
+    external:
+      name: skynet
