@@ -1,30 +1,35 @@
 #!/bin/bash
 # ./run.sh
 
-set -euo pipefail
+set -uo pipefail
 
 # Colors
 red='\033[0;31m'
 green='\033[0;32m'
 white='\033[0;m'
 
+# Docker var
+image=roger
+container=hnews
+
 function build {
   echo ""
   echo -e "$green[Start]$white Docker build"
   echo ""
-  docker build -t roger .
-  echo -e "Build roger ...$green done$white"
+  docker build -t $image .
+  echo -e "Build $image ...$green done$white"
   echo ""
   echo -e "$green[Status]$white Build ...$green OK$white"
 }
 
 function clean {
   echo ""
-  echo -e "$green[Start]$white Docker network cleanup"
+  echo -e "$green[Start]$white Docker system cleanup"
   echo ""
-  docker network prune -f
+  docker rm -f $container;
+  docker system prune -f
   echo ""
-  echo -e "Docker network cleanup ...$green done$white"
+  echo -e "Docker system cleanup ...$green done$white"
 }
 
 function network {
