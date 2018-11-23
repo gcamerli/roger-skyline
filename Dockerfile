@@ -59,11 +59,13 @@ RUN npm install
 
 # Host
 USER root
-RUN echo "172.17.0.2	skyline.local" >> /etc/hosts
+RUN echo "172.42.0.2	skyline.local" >> /etc/hosts
 USER roger
 
 # Ports
 EXPOSE 5000
+
+# Public key
 
 # Tls
 
