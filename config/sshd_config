@@ -21,8 +21,10 @@ Port 2222
 
 # Authentication:
 PermitRootLogin no 
-
 PubkeyAuthentication yes
+
+# Allowed users
+AllowUsers roger
 
 # The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
 # but this is overridden so installations will only check .ssh/authorized_keys
