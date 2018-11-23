@@ -22,6 +22,7 @@ RUN dnf install -y ansible \
 	cronie \
 	zsh \
 	bzip2 \
+	iputils \
 	util-linux-user
 
 # Ssh
