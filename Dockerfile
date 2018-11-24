@@ -1,7 +1,7 @@
 FROM fedora:28
 
 # Metadata
-LABEL mantainer="Gius. Camerlingor prototype formerli@gmail.com>"
+LABEL mantainer="Gius. Camerlingo <gcamerli@gmail.com>"
 LABEL version="1.0"
 LABEL description="Docker prototype for roger skyline (part I)."
 
