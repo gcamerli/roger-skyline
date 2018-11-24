@@ -12,7 +12,7 @@ ENV NAME=roger
 ENV TZ="Europe/Paris"
 
 # System update && install packages
-RUN dnf update -y
+RUN dnf upgrade -y --refresh
 RUN dnf install -y ansible \
 	ufw \
 	nginx \
@@ -28,7 +28,10 @@ RUN dnf install -y ansible \
 # Ssh
 COPY config/sshd_config /etc/ssh/sshd_config
 
-# Cron
+# Ufw
+RUN sudo ufw enable
+#RUN sudo ufw allow 2222/tcp
+#RUN sudo ufw status
 
 # User
 RUN echo "roger ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
@@ -37,10 +40,11 @@ USER roger
 ENV HOME=/home/roger
 WORKDIR $HOME
 
-# Ufw
-RUN sudo ufw enable
-#RUN sudo ufw allow 2222/tcp
-#RUN sudo ufw status
+# Cron
+COPY config/*.cron /etc/cron.d/
+RUN chmod 644 /etc/cron.d/*.cron
+COPY config/*.sh $HOME/cron/
+RUN chmod 744 $HOME/cron/*
 
 # Shell
 RUN sudo chsh -s /usr/bin/zsh roger
