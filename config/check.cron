@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+MAILTO=root
+
+# Cron rule to check if /etc/crontab is changed daily at 0:00 AM
+0 0 * * *	root	/home/roger/cron/check.sh
+

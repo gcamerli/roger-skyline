@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+
+# Cron rule to update the system packages weekly at 4:00 AM
+# and at each reboot, logs everything at /var/log/update_script.log
+0 4 * * 0	root 	/home/roger/cron/update.sh
+@reboot		root 	/home/roger/cron/update.sh
+
