@@ -42,9 +42,9 @@ WORKDIR $HOME
 
 # Cron
 COPY config/*.cron /etc/cron.d/
-RUN chmod 644 /etc/cron.d/*.cron
+RUN sudo chmod 644 /etc/cron.d/*.cron
 COPY config/*.sh $HOME/cron/
-RUN chmod 744 $HOME/cron/*
+RUN sudo chmod 744 $HOME/cron/*
 
 # Shell
 RUN sudo chsh -s /usr/bin/zsh roger
