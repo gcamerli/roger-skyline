@@ -26,6 +26,8 @@ To see the running service fire up your browser at `172.42.0.2:5000` et voilà y
 ### Reference
 
 + [Safer bash scripts with 'set -euxo pipefail'](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)
++ [Protect Linux server against DOS attacks with ufw](http://lepepe.github.io/sysadmin/2016/01/19/ubuntu-server-ufw.html)
++ [Survive DDOS attack with Nginx and fail2ban](https://easyengine.io/tutorials/nginx/fail2ban/)
 
 ---
 
