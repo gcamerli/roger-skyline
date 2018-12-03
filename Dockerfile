@@ -20,10 +20,12 @@ RUN dnf install -y ansible \
 	git \
 	sudo \
 	cronie \
+	htop \
 	zsh \
 	bzip2 \
 	iputils \
 	util-linux-user \
+	policycoreutils-python-utils \
 	mailx \
 	sendmail
 
