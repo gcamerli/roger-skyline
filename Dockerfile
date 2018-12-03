@@ -28,11 +28,6 @@ RUN dnf install -y ansible \
 # Ssh
 COPY config/sshd_config /etc/ssh/sshd_config
 
-# Ufw
-RUN sudo ufw enable
-#RUN sudo ufw allow 2222/tcp
-#RUN sudo ufw status
-
 # User
 RUN echo "roger ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN useradd -ms /bin/zsh roger
@@ -68,11 +63,3 @@ USER roger
 
 # Ports
 EXPOSE 5000
-
-# Public key
-
-# Tls
-
-# Nginx
-
-# Ansible
