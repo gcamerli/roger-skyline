@@ -23,7 +23,9 @@ RUN dnf install -y ansible \
 	zsh \
 	bzip2 \
 	iputils \
-	util-linux-user
+	util-linux-user \
+	mailx \
+	sendmail
 
 # Ssh
 COPY config/sshd_config /etc/ssh/sshd_config
