@@ -27,7 +27,8 @@ RUN dnf install -y ansible \
 	util-linux-user \
 	policycoreutils-python-utils \
 	mailx \
-	sendmail
+	sendmail \
+	fail2ban
 
 # Ssh
 COPY config/sshd_config /etc/ssh/sshd_config
