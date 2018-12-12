@@ -29,6 +29,7 @@ RUN dnf install -y ansible \
 	mailx \
 	sendmail \
 	fail2ban \
+	psad \
 	nmap
 
 # Ssh
